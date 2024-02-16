@@ -22,7 +22,7 @@ self.addEventListener("activate", (ev) => {
 });
 self.addEventListener("fetch", (ev) => {
   //try the cache first, then fetch and save copy in cache
-  ev.respondWith(cacheFirstAndSave());
+  ev.respondWith(cacheFirstAndSave(ev));
 });
 
 function cacheFirst(ev) {
