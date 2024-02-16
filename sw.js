@@ -1,5 +1,5 @@
 const version = 1;
-const cacheName = `YourNameHere-${version}`;
+const cacheName = `Goodness Ade-${version}`;
 const staticFiles = [];
 
 self.addEventListener("install", (ev) => {
@@ -22,7 +22,7 @@ self.addEventListener("activate", (ev) => {
 });
 self.addEventListener("fetch", (ev) => {
   //try the cache first, then fetch and save copy in cache
-  ev.respondWith(cacheFirstAndSave);
+  ev.respondWith(cacheFirstAndSave());
 });
 
 function cacheFirst(ev) {
